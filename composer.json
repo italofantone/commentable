@@ -1,0 +1,39 @@
+{
+    "name": "italofantone/commentable",
+    "description": "Is a PHP library designed to simplify and automate the creation of comments based on Laravel.",
+    "keywords": ["comment", "commentable", "eloquent", "laravel"],
+    "type": "library",
+    "require": {
+        "php": "^8.3",
+        "illuminate/database": "^11.20",
+        "illuminate/support": "^11.20"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "orchestra/testbench": "^9.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Italofantone\\Commentable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Italofantone\\Commentable\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Italo Morales Fantone",
+            "email": "i@rimorsoft.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Italofantone\\Commentable\\CommentableServiceProvider"
+            ]
+        }
+    }
+}
