@@ -11,7 +11,7 @@ class Comment extends Model
      *
      * @var array
      */
-    protected $fillable = ['body'];
+    protected $fillable = ['user_id', 'body'];
 
     /**
      * Get all of the owning commentable models.
@@ -19,5 +19,13 @@ class Comment extends Model
     public function commentable()
     {
        return $this->morphTo();
+    }
+
+    /**
+     * Get the user that owns the comment.
+     */
+    public function user()
+    {
+        return $this->belongsTo(config('commentable.user_model'));
     }
 }
