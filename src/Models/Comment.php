@@ -14,6 +14,13 @@ class Comment extends Model
     protected $fillable = ['user_id', 'body'];
 
     /**
+     * The relationships to always eager-load.
+     *
+     * @var array
+     */
+    protected $with = ['user'];
+
+    /**
      * Get all of the owning commentable models.
      */
     public function commentable()

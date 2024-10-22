@@ -11,7 +11,7 @@ class CommentableServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // ...
+        $this->mergeConfigFrom(__DIR__ . '/../config/commentable.php', 'commentable');
     }
 
     /**
